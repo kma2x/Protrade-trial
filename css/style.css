@@ -2,7 +2,7 @@ body {
 	margin: 0;
 	padding: 0;
     font-family: Helvetica,Arial,Sans-Serif;
-    background: #2f3240;
+    background: #171a26;
     font-size: 62.5%;
     line-height: 1.666666667em;
     color:#fff;
@@ -11,6 +11,20 @@ body {
 
 #root {
     min-width: 1024px;
+    font-size: .85rem;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.active {
+    color: #f7941d;
 }
 
 header.topbar {
@@ -43,8 +57,7 @@ header.topbar {
 
 .horizontal-menu-root {
     display:flex;
-    list-style-type:none;
-    font-size: .85rem;
+    font-size: .8rem;
     font-weight: bold;
     align-content: center;
     margin: 0;
@@ -53,15 +66,15 @@ header.topbar {
 
 .horizontal-menu-root li a {
     color: #eee;
-    text-decoration:none;
     padding: 4px 10px;
     line-height: 26px;
     border-left: 1px solid #333;
 }
 
-.horizontal-menu-root li.active a {
-    color: #f7941d;
+.horizontal-menu-root .active {
+    color:#f7941d;
 }
+
 
 #profitloss {
     font-size: .85rem;
@@ -109,7 +122,6 @@ header.topbar {
 
 .btn-upgrade a {
     color: #fff;
-    text-decoration: none; 
  }
 
 .account-dropdown {
@@ -117,7 +129,6 @@ header.topbar {
 }
 
 .account-dropdown-list {
-    list-style: none;
     position: absolute;
     top:32px;
     width: 90px;
@@ -139,18 +150,376 @@ header.topbar {
     display: block;
 }
 
-.account-dropdown-list:hover{
-    color:#f7941d;
-}
-
 .account-dropdown-list li a {
     padding: 20px 0;
 }
 
-.main-content {
-    display: block;
-    width: 100vh;
-    height: 100vh;
+.account-dropdown-list li a:hover {
+    color: #f7941d;
 }
 
+.main-content {
+    display: block;
+}
+
+#home {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 42px);
+}
+
+.col {
+    border: 1px solid #fff;
+}
+
+#col1 {
+    display: flex;
+    flex: 1 1;
+    flex-direction: column;
+}
+
+.chart, .market {
+    margin: 1px;
+}
+
+.chart {
+    flex: 1 1;
+}
+.market {
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    background: #2f3240;
+}
+
+.market-chart {
+    flex: 1 1;
+}
+
+iframe {
+    border: none;
+}
+
+.market-menu {
+    height: 30px;
+    line-height:30px;
+    background: #131722;
+    font-size: .9rem;
+}
+
+.market-menu ul{
+    display: flex;
+    justify-content:flex-end;
+    margin:0;
+}
+.market-menu ul li{ 
+    padding: 0 10px;
+}
+
+
+#col2 {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.history {
+    background: #2f3240;
+    margin: 1px;
+    flex: 1 1;
+}
+
+#derivative-info {
+    height: 42px;
+    font-size: .9rem;
+    border-bottom: 1px solid #444;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    align-content: space-around;
+}
+
+.symbol {
+    align-self:center;
+    justify-self: center;
+    font-size: 1rem;
+    font-weight: bold;
+    grid-column: 1/3;
+}
+
+.price-floor {
+   justify-self: center;
+}
+
+.price-floor-number {
+    color:#00c5c5
+}
+
+.price-reference {
+   
+}
+
+.price-reference-number {
+   color: #ffd900;
+}
+
+.price-cell {
+   
+}
+
+.price-cell-number {
+    color: #ff25ff;
+}
+
+.tab {
+    display: flex;
+    justify-content: space-around;
+    padding:0;
+    margin: 0;
+    line-height: 30px;
+}
+
+
+.history table, tr {
+    border: 1px solid #434344;
+    border-collapse: collapse;
+    height: 25px;
+    line-height:25px;
+}
+
+.history .seperate-price {
+    border-right: 1px solid #434344;
+}
+
+.history .seperate-volume-percent {
+    position: relative;
+}
+
+.history .volume-percent {
+    position: absolute;
+    top: 0;
+    right:0;
+    width: 100%;
+    height: 100%;
+    background: rgba(247, 148, 29, 0.2);
+}
+  
+
+.watchlist {
+    background: #2f3240;
+    margin: 1px;
+    height: 45%;
+    font-size: .85rem;
+}
+
+.watchlist table {
+    padding-top: 5px;
+    width: 100%;
+    border-spacing: 0;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+}
+
+thead {
+    background: hsla(0,0%,47.1%,.15);
+}
+
+.watchlist table tr:nth-child(2n) {
+    background: hsla(0,0%,47.1%,.15);
+}
+
+#home .watchlist table td.symbol {
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 400;
+}
+#home .watchlist table td {
+    line-height: 25px;
+    padding-right: 3px;
+}
+
+.txt-red {
+    color: red;
+}
+
+.txt-green {
+    color: #0f0;
+}
+
+#col3 {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+#orderbook {
+    flex: 1 1;
+    background: #2f3240;
+    margin: 1px;
+}
+
+table th {
+    text-align: center;
+    line-height: 25px;
+    padding: 0 5px;
+    font-size: .8rem;
+}
+
+.title ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 42px;
+    padding:0;
+    margin:0;
+    border-bottom: 1px solid #444;
+}
+
+.title ul i {
+    color: #f7941d;
+}
+
+.refresh-orderbook {
+    padding-right: 15px;
+}
+
+.command-list {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.no-order {
+    line-height: 50px;
+    font-size: 15px;
+    text-align: center;
+    color: #777;
+}
+
+.place-form {
+    background: #2f3240;
+    margin: 0 0 1px;
+    padding: 15px 15px 45px 5px;
+    font-size: 0.85rem;
+}
+
+.place-form input {
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 0 5px;
+}
+
+.place-form select {
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+  
+.type ul {
+    display: flex;
+    padding: 5px 0;
+    justify-content: space-around;
+}
+
+.row-label {
+    width: 100px;
+}
+
+.row-symbol {
+    padding: 0 0 10px 10px;
+    display: flex;
+    height: 35px;
+    line-height:35px;
+}
+
+#symbol-name {
+    flex: 1 1;
+}
+
+.row-price {
+    padding: 0 0 10px 10px;
+    display: flex;
+    height: 35px;
+    line-height:35px;
+}
+
+.order-price {
+    flex: 1 1;
+}
+
+.row-quantity {
+    padding: 0 0 10px 10px;
+    display: flex;
+    height: 35px;
+    line-height:35px;
+}
+.quantity {
+    flex: 1 1;
+}
+
+.row-button {
+    display:flex;
+    justify-content: flex-end;
+}
+
+.row-button button {
+    cursor: pointer;
+    width: 110px;
+    height: 30px;
+    margin: 0 5px;
+    border-radius: 5px;
+    border: none;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.row-button .buy {
+    background: #008000;
+}
+
+.row-button .sell {
+    background: #ff0000;
+}
+
+.save-order {
+    line-height: 30px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 400px;
+    height: 45px;
+    line-height: 30px;
+}
+
+.footer ul {
+    display: flex;
+    padding: 0;
+    text-align: center;
+}
+
+.footer ul li {
+    flex: 1 1;
+    background: #131722;
+}
+
+.footer ul .active {
+    background: #2f3240;
+}
+
+.footer-asset {
+    position: fixed;
+    bottom: 0;
+}
+
+.footer-asset p {
+    color: #777;
+    line-height:30px;
+    margin: 0;
+    padding: 0 10px;
+}
 
