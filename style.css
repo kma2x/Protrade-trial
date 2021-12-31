@@ -1,0 +1,70 @@
+body {
+  font-size: 0.9rem !important;
+  color: #fff !important;
+}
+
+body a {
+  color: #fff !important;
+}
+
+body .active {
+  color: #F7941D !important;
+}
+
+body .txt-red {
+  color: red !important;
+}
+
+body .txt-floor {
+  color: #00c5c5 !important;
+}
+
+body .txt-tc {
+  color: #ffd900 !important;
+}
+
+body .txt-green {
+  color: #0f0 !important;
+}
+
+body .txt-cell {
+  color: #ff25ff !important;
+}
+
+body header {
+  height: 42px;
+  background: #131722;
+}
+
+body #home {
+  padding-top: 42px;
+}
+
+body table {
+  width: 100%;
+}
+
+body table thead {
+  background: rgba(120, 120, 120, 0.15);
+}
+
+body .title .border-bottom, body .derivative-info-table .border-bottom {
+  border-bottom: 1px solid #444 !important;
+}
+
+body .title tr td:nth-child(2), body .derivative-info-table tr td:nth-child(2) {
+  border-right: 1px solid #444 !important;
+}
+
+body .watchlist {
+  color: #fff;
+}
+
+body .watchlist tr:nth-child(2n) {
+  background: rgba(120, 120, 120, 0.15);
+}
+
+body .row-label {
+  width: 100px;
+}
+/*# sourceMappingURL=style.css.map */

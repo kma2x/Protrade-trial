@@ -1,0 +1,81 @@
+$color-blue: blue;
+$color-white: #fff;
+$bg: #f1f1f1;
+$color-primary:  #F7941D;
+$color-active: #F7941D; 
+$bg-topbar: #131722;
+$txt-red: red;
+$txt-floor: #00c5c5;
+$txt-tc: #ffd900;
+$txt-green: #0f0;
+$txt-cell: #ff25ff;
+
+
+body {
+
+    font-size: .9rem!important;
+
+    color: $color-white !important;
+
+    a {
+        color: $color-white !important;;
+    }
+
+    .active {
+        color:$color-active!important;
+    }
+    .txt-red {
+        color: $txt-red!important;
+    }
+
+    .txt-floor {
+        color: $txt-floor!important;
+    }
+
+    .txt-tc {
+        color: $txt-tc!important;
+    }
+
+    .txt-green {
+        color: $txt-green!important;
+    }
+
+    .txt-cell {
+        color: $txt-cell!important;
+    }
+
+    header {
+        height: 42px;
+        background: $bg-topbar;
+    }
+
+    #home {
+        padding-top: 42px;
+    }
+    table {
+        width: 100%;
+        thead {
+            background: hsla(0,0%,47.1%,.15);
+        }
+    }
+
+    .title, .derivative-info-table {
+        .border-bottom {
+            border-bottom: 1px solid #444!important;
+        }
+        tr td:nth-child(2) {
+            border-right: 1px solid #444!important;
+        }
+    }
+
+    .watchlist {
+        color: $color-white;
+        tr:nth-child(2n) {
+            background: hsla(0,0%,47.1%,.15);
+        }
+    }
+
+    .row-label {
+        width: 100px;
+    }
+}
